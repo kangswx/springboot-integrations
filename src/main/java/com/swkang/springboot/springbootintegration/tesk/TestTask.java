@@ -1,6 +1,5 @@
 package com.swkang.springboot.springbootintegration.tesk;
 
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import java.text.SimpleDateFormat;
@@ -20,7 +19,7 @@ public class TestTask {
      */
     //@Scheduled(fixedRate = 2000)  //每隔两秒钟执行一次
     //@Scheduled(fixedDelay = 2000)
-    @Scheduled(fixedDelayString = "2000")
+    //@Scheduled(fixedDelayString = "2000")
     //@Scheduled(cron = "0/2 * * * * *")
     public void sum() throws InterruptedException {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
