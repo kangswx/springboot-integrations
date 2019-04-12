@@ -6,21 +6,26 @@ import java.io.Serializable;
 
 /**
  * 文章对象
+ * Document  一天记录
+ * indexName  数据库
+ * type       表
  */
 @Document(indexName = "blog", type = "artile")
 public class Article implements Serializable{
 
-    private Integer id;
+    private static final long serialVersionUID = 1L;
+
+    private Long id;
     private String title;
     private String summary;
     private String content;
     private int pv;
 
-    public Integer getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(long id) {
         this.id = id;
     }
 
