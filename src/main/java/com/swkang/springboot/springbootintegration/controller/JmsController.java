@@ -31,4 +31,16 @@ public class JmsController {
         return JsonData.buildSuccess();
     }
 
+    /**
+     * 发布消息生产者
+     * @param msg
+     * @return
+     */
+    @GetMapping("topic")
+    public Object topic(String msg){
+        System.out.println("msg: "+msg);
+        producerService.publish(msg);
+        return JsonData.buildSuccess();
+    }
+
 }
