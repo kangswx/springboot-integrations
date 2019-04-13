@@ -3,6 +3,9 @@ package com.swkang.springboot.springbootintegration.jms;
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
 
+/**
+ * 消息主题订阅
+ */
 @Component
 public class TopicConsumer {
 
