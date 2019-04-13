@@ -21,4 +21,10 @@ public interface ProducerService {
      */
     public void sendMessage(final String message);
 
+    /**
+     * 发布订阅
+     * @param msg
+     */
+    public void publish(String msg);
+
 }
