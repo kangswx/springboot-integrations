@@ -9,12 +9,20 @@ import org.springframework.stereotype.Component;
 @Component
 public class TopicConsumer {
 
-    @JmsListener(destination = "video.topic")
+    /**
+     * 可以同时支持点对点和发布订阅两种模式
+     * @param text
+     */
+    @JmsListener(destination = "video.topic", containerFactory = "jmsListenerContainerTopic")
     public void receive(String text){
         System.out.println("TopicConsumer1收到订阅: "+text);
     }
 
-    @JmsListener(destination = "video.topic")
+    /**
+     * 可以同时支持点对点和发布订阅两种模式
+     * @param text
+     */
+    @JmsListener(destination = "video.topic", containerFactory = "jmsListenerContainerTopic")
     public void receive2(String text){
         System.out.println("TopicConsumer2收到订阅: "+text);
     }
