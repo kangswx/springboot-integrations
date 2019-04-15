@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /**
+         * 需要判断浏览器是否支持
+         */
+        var source = new EventSource("api/v1/sse/get_data");
+        source.onmessage = function (event) {
+            console.info(event.data);
+            document.getElementById("result").innerText = event.data;
+        }
+    </script>
+</head>
+<body>
+模拟股票行情
+<div>swkang test</div>
+<div id="result"></div>
+</body>
+</html>
